@@ -6,7 +6,7 @@
 [![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)](https://www.markdownguide.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-*Um guia abrangente sobre estruturas de dados em Java, com análise detalhada de trade-offs, complexidades e exemplos práticos.*
+_Um guia abrangente sobre estruturas de dados em Java, com análise detalhada de trade-offs, complexidades e exemplos práticos._
 
 [🚀 Início Rápido](#-início-rápido) •
 [📖 Documentação](#-documentação-completa) •
@@ -44,37 +44,37 @@
 
 ### 🗂️ Estruturas de Lista
 
-| Estrutura | Acesso | Inserção | Uso Principal | Documentação |
-|-----------|--------|----------|---------------|--------------|
-| **Array / ArrayList** | O(1) | O(1)* | Lista geral | [📄 Docs](./docs/arrays-arraylist.md) |
-| **LinkedList** | O(n) | O(1)† | Inserções nas pontas | [📄 Docs](./docs/linkedlist.md) |
+| Estrutura             | Acesso | Inserção | Uso Principal        | Documentação                          |
+| --------------------- | ------ | -------- | -------------------- | ------------------------------------- |
+| **Array / ArrayList** | O(1)   | O(1)\*   | Lista geral          | [📄 Docs](./docs/arrays-arraylist.md) |
+| **LinkedList**        | O(n)   | O(1)†    | Inserções nas pontas | [📄 Docs](./docs/linkedlist.md)       |
 
-*Amortizado no final | †Nas pontas
+\*Amortizado no final | †Nas pontas
 
 ### 🎯 Estruturas de Conjunto
 
-| Estrutura | Operações | Ordenado | Documentação |
-|-----------|-----------|----------|--------------|
-| **HashSet** | O(1) | ❌ | [📄 Docs](./docs/hashset.md) |
-| **LinkedHashSet** | O(1) | Inserção | [📄 Docs](./docs/linkedhashset.md) |
-| **TreeSet** | O(log n) | ✅ | [📄 Docs](./docs/treeset.md) |
+| Estrutura         | Operações | Ordenado | Documentação                       |
+| ----------------- | --------- | -------- | ---------------------------------- |
+| **HashSet**       | O(1)      | ❌       | [📄 Docs](./docs/hashset.md)       |
+| **LinkedHashSet** | O(1)      | Inserção | [📄 Docs](./docs/linkedhashset.md) |
+| **TreeSet**       | O(log n)  | ✅       | [📄 Docs](./docs/treeset.md)       |
 
 ### 🗃️ Estruturas de Mapa
 
-| Estrutura | Operações | Ordenado | Thread-Safe | Documentação |
-|-----------|-----------|----------|-------------|--------------|
-| **HashMap** | O(1) | ❌ | ❌ | [📄 Docs](./docs/hashmap.md) |
-| **LinkedHashMap** | O(1) | Inserção | ❌ | [📄 Docs](./docs/linkedhashmap.md) |
-| **TreeMap** | O(log n) | ✅ | ❌ | [📄 Docs](./docs/treemap.md) |
-| **ConcurrentHashMap** | O(1) | ❌ | ✅ | [📄 Docs](./docs/concurrenthashmap.md) |
+| Estrutura             | Operações | Ordenado | Thread-Safe | Documentação                           |
+| --------------------- | --------- | -------- | ----------- | -------------------------------------- |
+| **HashMap**           | O(1)      | ❌       | ❌          | [📄 Docs](./docs/hashmap.md)           |
+| **LinkedHashMap**     | O(1)      | Inserção | ❌          | [📄 Docs](./docs/linkedhashmap.md)     |
+| **TreeMap**           | O(log n)  | ✅       | ❌          | [📄 Docs](./docs/treemap.md)           |
+| **ConcurrentHashMap** | O(1)      | ❌       | ✅          | [📄 Docs](./docs/concurrenthashmap.md) |
 
 ### 📥 Estruturas de Fila/Pilha
 
-| Estrutura | Tipo | Operações | Documentação |
-|-----------|------|-----------|--------------|
-| **ArrayDeque** | Fila/Pilha | O(1) | [📄 Docs](./docs/arraydeque.md) |
-| **PriorityQueue** | Heap | O(log n) | [📄 Docs](./docs/priorityqueue.md) |
-| **Stack** | Pilha (⚠️ legado) | O(1) | [📄 Docs](./docs/stack.md) |
+| Estrutura         | Tipo              | Operações | Documentação                       |
+| ----------------- | ----------------- | --------- | ---------------------------------- |
+| **ArrayDeque**    | Fila/Pilha        | O(1)      | [📄 Docs](./docs/arraydeque.md)    |
+| **PriorityQueue** | Heap              | O(log n)  | [📄 Docs](./docs/priorityqueue.md) |
+| **Stack**         | Pilha (⚠️ legado) | O(1)      | [📄 Docs](./docs/stack.md)         |
 
 ## 🎯 Exemplos
 
@@ -92,12 +92,12 @@ List<Integer> semDuplicatas = new ArrayList<>(new LinkedHashSet<>(original));
 ```java
 class LRUCache<K, V> extends LinkedHashMap<K, V> {
     private final int capacity;
-    
+
     LRUCache(int capacity) {
         super(capacity, 0.75f, true); // access-order
         this.capacity = capacity;
     }
-    
+
     @Override
     protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
         return size() > capacity;
@@ -146,26 +146,31 @@ Preciso de FILA/PILHA?
 ## 📚 Índice Completo
 
 ### 📘 Guias de Referência
+
 - [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) - Referência rápida com decisão em 30s
 - [CHECKLIST.md](./CHECKLIST.md) - Checklist interativo para escolha
 - [COMPARACOES_CODIGO.md](./COMPARACOES_CODIGO.md) - Comparações lado a lado
 
 ### 📗 Guias Detalhados
+
 - [Guia de Seleção](./docs/guia-selecao.md) - Árvore de decisão completa
 - [Comparação Geral](./docs/comparacao-geral.md) - Tabelas comparativas
 
 ### 📕 Documentação de Estruturas
 
 **Listas:**
+
 - [Arrays e ArrayList](./docs/arrays-arraylist.md)
 - [LinkedList](./docs/linkedlist.md)
 
 **Sets:**
+
 - [HashSet](./docs/hashset.md)
 - [LinkedHashSet](./docs/linkedhashset.md)
 - [TreeSet](./docs/treeset.md)
 
 **Maps:**
+
 - [HashMap](./docs/hashmap.md)
 - [LinkedHashMap](./docs/linkedhashmap.md)
 - [TreeMap](./docs/treemap.md)
@@ -173,6 +178,7 @@ Preciso de FILA/PILHA?
 - [ConcurrentHashMap](./docs/concurrenthashmap.md)
 
 **Queues & Stacks:**
+
 - [Queue](./docs/queue.md)
 - [Deque](./docs/deque.md)
 - [ArrayDeque](./docs/arraydeque.md)
@@ -211,7 +217,7 @@ Este projeto está sob a licença MIT. Livre para uso educacional e comercial.
 
 <div align="center">
 
-**Feito com ❤️ para a comunidade Java**
+**Feito com 💜 para a comunidade Java**
 
 [⬆ Voltar ao topo](#-guia-completo-de-estruturas-de-dados-em-java)
 
